@@ -4,10 +4,7 @@ from rest_pandas import PandasSerializer
 
 
 class BookSerializer(serializers.Serializer):
-    book_ordering = serializers.IntegerField()
-    novel = serializers.CharField(max_length=255)
-    author = serializers.CharField(max_length=150)
-    country = serializers.CharField(max_length=30)
+    # download = serializers.SerializerMethodField(read_only=True, label="تحميل الكتاب", default="http://127.0.0.1:8000/5/")
 
     class Meta:
         list_serializer_class = PandasSerializer
